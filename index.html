@@ -1,212 +1,12 @@
-{<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Md Asif — Android App Developer (Kotlin/Java). Portfolio, projects, skills, experience, and contact." />
-  <title>Md Asif | Android Developer</title>
+  <meta name="description" content="Md Asif — Cross‑platform mobile app developer (Flutter/Kotlin). Portfolio, projects, skills, experience, and contact." />
+  <title>Md Asif | Cross‑Platform Mobile Developer</title>
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#0f1a2e;
-      --text:#e7eefc;
-      --muted:#b7c3dd;
-      --line:rgba(255,255,255,.08);
-      --accent:#7c5cff;
-      --accent2:#22c55e;
-      --shadow: 0 16px 40px rgba(0,0,0,.35);
-      --radius:18px;
-      --max: 1100px;
-    }
-    [data-theme="light"]{
-      --bg:#f6f8ff;
-      --card:#ffffff;
-      --text:#121a2a;
-      --muted:#4a5568;
-      --line:rgba(10,20,40,.10);
-      --accent:#5b5cff;
-      --accent2:#16a34a;
-      --shadow: 0 16px 40px rgba(10,20,40,.10);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", "Noto Sans", "Liberation Sans", sans-serif;
-      background: radial-gradient(900px 400px at 20% 0%, rgba(124,92,255,.25), transparent 60%),
-                  radial-gradient(900px 400px at 90% 10%, rgba(34,197,94,.18), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.55;
-    }
-    a{color:inherit; text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
-    .nav{
-      position:sticky; top:0; z-index:10;
-      backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom, rgba(0,0,0,.35), transparent);
-      border-bottom: 1px solid var(--line);
-    }
-    [data-theme="light"] .nav{
-      background: linear-gradient(to bottom, rgba(246,248,255,.92), rgba(246,248,255,.65));
-    }
-    .nav-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0;
-    }
-    .brand{
-      display:flex; gap:10px; align-items:center;
-      font-weight:800; letter-spacing:.2px;
-    }
-    .dot{
-      width:12px; height:12px; border-radius:50%;
-      background: conic-gradient(from 0deg, var(--accent), var(--accent2), var(--accent));
-      box-shadow:0 0 0 6px rgba(124,92,255,.12);
-    }
-    .nav-links{display:flex; gap:14px; flex-wrap:wrap; align-items:center}
-    .nav-links a{
-      color:var(--muted);
-      padding:8px 10px;
-      border-radius:10px;
-      border:1px solid transparent;
-      transition:.18s ease;
-      font-weight:600;
-      font-size:14px;
-    }
-    .nav-links a:hover{
-      color:var(--text);
-      border-color: var(--line);
-      background: rgba(255,255,255,.04);
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:12px 14px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      transition:.18s ease;
-      font-weight:700;
-      cursor:pointer;
-      user-select:none;
-    }
-    .btn:hover{transform: translateY(-1px); box-shadow: 0 10px 22px rgba(0,0,0,.25)}
-    .btn.primary{
-      background: linear-gradient(135deg, var(--accent), #3b82f6);
-      border-color: transparent;
-    }
-    .btn.success{
-      background: linear-gradient(135deg, var(--accent2), #10b981);
-      border-color: transparent;
-    }
-    .btn.small{padding:9px 10px; border-radius:10px; font-size:13px; font-weight:700}
-    .hero{
-      padding:54px 0 24px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 920px){
-      .grid{grid-template-columns: 1fr}
-    }
-    .card{
-      background: rgba(255,255,255,.03);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    [data-theme="light"] .card{background: var(--card)}
-    .card-inner{padding:22px}
-    .kicker{
-      display:inline-flex; align-items:center; gap:8px;
-      font-size:13px; font-weight:800;
-      color: var(--muted);
-      letter-spacing:.2px;
-    }
-    .pill{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size:13px;
-      font-weight:700;
-    }
-    .title{
-      font-size:44px;
-      line-height:1.08;
-      margin:10px 0 12px;
-      letter-spacing:-.8px;
-    }
-    @media (max-width: 520px){ .title{font-size:36px} }
-    .subtitle{color:var(--muted); font-size:16px; margin:0 0 18px}
-    .meta{
-      display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 0;
-    }
-    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
-    .section{padding:22px 0}
-    .section h2{
-      margin:0 0 10px;
-      font-size:22px;
-      letter-spacing:-.2px;
-    }
-    .section p{margin:0; color:var(--muted)}
-    .two{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:18px;
-    }
-    @media (max-width: 920px){ .two{grid-template-columns:1fr} }
-    .list{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
-    .tag{
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size:13px;
-      font-weight:700;
-    }
-    .proj{
-      display:flex; flex-direction:column; gap:10px;
-      padding:16px;
-      border-radius: 16px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-    }
-    [data-theme="light"] .proj{background:#fbfcff}
-    .proj h3{margin:0; font-size:16px}
-    .proj p{margin:0; color:var(--muted); font-size:14px}
-    .proj .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-    .muted{color:var(--muted)}
-    .footer{
-      padding:28px 0 40px;
-      border-top:1px solid var(--line);
-      margin-top:20px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .split{
-      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center;
-    }
-    .avatar{
-      width:70px; height:70px; border-radius:20px;
-      background: linear-gradient(135deg, rgba(124,92,255,.35), rgba(34,197,94,.25));
-      border:1px solid var(--line);
-      display:flex; align-items:center; justify-content:center;
-      font-weight:900;
-      font-size:18px;
-      letter-spacing:.5px;
-    }
-    .tiny{font-size:12px}
-    .hr{height:1px; background:var(--line); margin:14px 0}
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body data-theme="dark">
@@ -238,30 +38,29 @@
       <div class="grid">
         <div class="card">
           <div class="card-inner">
-            <div class="kicker">Android App Developer • Kotlin • Java</div>
-            <h1 class="title">Building user-friendly Android apps with clean architecture.</h1>
+            <div class="kicker">Cross‑Platform Mobile Developer • Android • iOS</div>
+            <h1 class="title">Building scalable cross‑platform apps with clean architecture.</h1>
             <p class="subtitle">
-              I’m <strong>Md Asif</strong>, an Android developer focused on practical, real-world apps using
-              Kotlin/Java, REST APIs, and modern Android development patterns.
+              I’m <strong>Md Asif</strong>, a cross‑platform mobile developer focused on Android &amp; iOS apps using Flutter and Kotlin. I build high‑quality, user‑friendly applications and continuously learn to deliver scalable products.
             </p>
 
             <div class="actions">
               <a class="btn primary" href="#projects">View Projects</a>
-              <a class="btn" href="mailto:asifulislam01234@gmail.com">Email Me</a>
+              <a class="btn" href="/cdn-cgi/l/email-protection#29485a404f5c45405a45484419181b1a1d694e44484045074a4644">Email Me</a>
               <a class="btn success" href="#contact">Hire / Contact</a>
             </div>
 
             <div class="meta">
               <span class="pill">📍 Bangladesh (Dhaka / Gazipur)</span>
-              <span class="pill">💼 Open to Android roles</span>
-              <span class="pill">🧩 MVVM • Firebase • Material Design</span>
+              <span class="pill">💼 Open to Mobile Developer roles</span>
+              <span class="pill">🧩 MVVM • Clean Architecture • Firebase • Flutter</span>
             </div>
 
             <div class="hr"></div>
             <div class="tiny muted">
               GitHub: <a href="https://github.com/iamacat02" target="_blank" rel="noreferrer">github.com/iamacat02</a>
-              • LinkedIn: <a href="https://www.linkedin.com/in/asiful-islam-a24148350?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer">asiful-islam</a>
-              • Phone: +880-1640526786
+              • LinkedIn: <a href="https://www.linkedin.com/in/asiful-islam-a24148350" target="_blank" rel="noreferrer">asiful‑islam</a>
+              • Phone: +880‑1640526786
             </div>
           </div>
         </div>
@@ -272,18 +71,18 @@
               <div class="avatar" aria-label="Initials">MA</div>
               <div>
                 <div style="font-weight:900; font-size:18px;">Md Asif</div>
-                <div class="muted">Android App Developer</div>
+                <div class="muted">Cross‑Platform Mobile Developer</div>
               </div>
             </div>
 
             <div class="hr"></div>
 
             <div style="display:grid; gap:10px;">
-              <div class="pill">📧 asifulislam01234@gmail.com</div>
-              <div class="pill">📞 +880-1640526786</div>
-              <div class="pill">🏢 Envobyte LTD (Current)</div>
+              <div class="pill">📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7514061c1300191c061914184544474641351218141c195b161a18">[email&#160;protected]</a></div>
+              <div class="pill">📞 +880‑1640526786</div>
+              <div class="pill">🏢 Envobyte Ltd — Junior Android Developer (Jan 2026 – Present)</div>
               <div class="tiny muted">
-                3rd floor, Tayamun Center, Shib Bari More Cir, Khulna 9100
+                Gazipur, Dhaka, Bangladesh
               </div>
             </div>
 
@@ -306,9 +105,10 @@
           <div class="card-inner">
             <h2>About</h2>
             <p>
-              I’m a passionate Android App Developer with strong knowledge of <strong>Java</strong>, <strong>Kotlin</strong>,
-              and <strong>Android Studio</strong>. I enjoy building clean, user-friendly applications and continuously learning.
-              I’m eager to grow by working on real-world products and collaborating with teams.
+              I’m a passionate junior cross‑platform mobile app developer with hands‑on experience in building, optimizing and publishing Android and iOS applications using <strong>Flutter</strong> and <strong>Kotlin</strong>. I have a strong foundation in <strong>Clean Architecture</strong>, <strong>MVVM</strong>, Firebase‑based backends, and performance‑focused mobile development. I enjoy building scalable products and am eager to grow as a software engineer by continuously learning and collaborating.
+            </p>
+            <p style="margin-top:12px;">
+              Career Goal: To grow as a software engineer by building high‑quality mobile products, contributing to scalable systems, and continuously improving technical and architectural skills across Android and iOS platforms.
             </p>
           </div>
         </div>
@@ -317,12 +117,12 @@
           <div class="card-inner">
             <h2>What I bring</h2>
             <div class="list">
-              <span class="tag">Clean UI (XML + Material)</span>
-              <span class="tag">REST API + JSON</span>
-              <span class="tag">MVVM (and scalable patterns)</span>
-              <span class="tag">Firebase integration</span>
-              <span class="tag">Permissions + system tooling</span>
-              <span class="tag">Performance-minded</span>
+              <span class="tag">Cross‑platform apps (Flutter &amp; Kotlin Multiplatform)</span>
+              <span class="tag">Clean Architecture &amp; MVVM</span>
+              <span class="tag">Firebase &amp; Supabase</span>
+              <span class="tag">REST APIs &amp; Cloud Functions</span>
+              <span class="tag">Performance &amp; optimization</span>
+              <span class="tag">Git &amp; Collaboration</span>
             </div>
           </div>
         </div>
@@ -336,17 +136,26 @@
       <div class="card">
         <div class="card-inner">
           <h2>Skills</h2>
-          <p>Tools and technologies I use for Android development.</p>
+          <p>Tools and technologies I use for mobile development.</p>
           <div class="list" style="margin-top:14px;">
             <span class="tag">Kotlin</span>
             <span class="tag">Java</span>
-            <span class="tag">Android Studio</span>
-            <span class="tag">REST API</span>
-            <span class="tag">JSON</span>
-            <span class="tag">Firebase</span>
-            <span class="tag">Material Design</span>
-            <span class="tag">UI/UX (XML)</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">Android SDK</span>
+            <span class="tag">Kotlin Multiplatform</span>
+            <span class="tag">Jetpack Compose</span>
+            <span class="tag">XML</span>
             <span class="tag">MVVM</span>
+            <span class="tag">Clean Architecture</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Room</span>
+            <span class="tag">Bloc</span>
+            <span class="tag">GetX</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Cloud Functions</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
           </div>
         </div>
       </div>
@@ -359,49 +168,60 @@
       <div class="card">
         <div class="card-inner">
           <h2>Projects</h2>
-          <p>Selected Android projects (add GitHub / Play links when ready).</p>
+          <p>Selected mobile projects (links to repositories or Play Store).</p>
 
-          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:14px;">
+          <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; margin-top:14px;">
             <div class="proj">
-              <h3>Video Player</h3>
-              <p>YouTube-style UI video player with modern features.</p>
+              <h3>Image to Text Scanner</h3>
+              <p>OCR‑based document scanner supporting image‑to‑text, PDF and Word conversion with batch scanning, filters, password protection, file history and dark mode.</p>
               <div class="row">
-                <span class="tag">Android</span><span class="tag">Firebase</span><span class="tag">UI/UX</span>
+                <span class="tag">Kotlin</span><span class="tag">ML OCR</span><span class="tag">Room</span><span class="tag">Coroutines</span>
               </div>
               <div class="row">
-                <!-- Replace # with real repo link -->
+                <a class="btn small" href="https://play.google.com/store/apps/details?id=com.ocr.image.to.text.scanner&pcampaignid=web_share" target="_blank" rel="noreferrer">Play Store</a>
                 <a class="btn small" href="#" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="btn small" href="#" target="_blank" rel="noreferrer">Demo</a>
               </div>
             </div>
 
             <div class="proj">
-              <h3>Audio Player</h3>
-              <p>Built with Kotlin and MVVM integration for clean architecture.</p>
+              <h3>Image Compressor &amp; Resizer</h3>
+              <p>High‑performance image compression tool with batch processing, format conversion, EXIF support and social‑media ready presets.</p>
               <div class="row">
-                <span class="tag">Kotlin</span><span class="tag">MVVM</span><span class="tag">Media</span>
+                <span class="tag">Kotlin</span><span class="tag">Image Processing</span><span class="tag">Storage APIs</span>
               </div>
               <div class="row">
+                <a class="btn small" href="https://play.google.com/store/apps/details?id=com.image.compressor.resizer&pcampaignid=web_share" target="_blank" rel="noreferrer">Play Store</a>
                 <a class="btn small" href="#" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="btn small" href="#" target="_blank" rel="noreferrer">Demo</a>
               </div>
             </div>
 
             <div class="proj">
-              <h3>Gfx Tool App</h3>
-              <p>Advanced data read/write handling with root + non-root and permissions (e.g., Shizuku-style).</p>
+              <h3>Volume Amplifier</h3>
+              <p>Audio enhancement app with bass boost, equalizer, presets and system‑wide sound amplification.</p>
               <div class="row">
-                <span class="tag">Storage</span><span class="tag">Permissions</span><span class="tag">Tools</span>
+                <span class="tag">Kotlin</span><span class="tag">Audio APIs</span><span class="tag">Custom UI</span>
               </div>
               <div class="row">
+                <a class="btn small" href="https://play.google.com/store/apps/details?id=com.volume.amplifier.sound.booster.max&pcampaignid=web_share" target="_blank" rel="noreferrer">Play Store</a>
                 <a class="btn small" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+
+            <div class="proj">
+              <h3>WiFi Bill Manager</h3>
+              <p>Cross‑platform billing system with authentication, client management, automated monthly bill generation and cloud functions.</p>
+              <div class="row">
+                <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Supabase</span><span class="tag">Appwrite</span>
+              </div>
+              <div class="row">
+                <a class="btn small" href="#" target="_blank" rel="noreferrer">GitHub ( Private )</a>
                 <a class="btn small" href="#" target="_blank" rel="noreferrer">Demo</a>
               </div>
             </div>
           </div>
 
           <div class="tiny muted" style="margin-top:12px;">
-            Tip: If you send me project repo links + 2–4 screenshots each, I’ll upgrade these cards with a nice gallery.
+            Tip: Provide repository links and Play Store URLs to make these cards interactive.
           </div>
         </div>
       </div>
@@ -414,20 +234,36 @@
       <div class="card">
         <div class="card-inner">
           <h2>Experience</h2>
+
           <div class="proj" style="margin-top:12px;">
-            <h3>Envobyte LTD — Android Developer</h3>
-            <p class="muted">3rd floor, Tayamun Center, Shib Bari More Cir, Khulna 9100</p>
+            <h3>Envobyte Ltd — Junior Android Developer</h3>
+            <p class="muted">Jan 2026 – Present</p>
             <div class="row">
               <span class="tag">Android</span>
+              <span class="tag">Kotlin</span>
+               <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+              <span class="tag">Cross‑platform</span>
               <span class="tag">Team Collaboration</span>
-              <span class="tag">App Development</span>
             </div>
             <p class="tiny muted">
-               • Teamwork and management<br>
-               • Git & Github<br>
-               • Project Management<br>
-               • Comminucation<br>
-               • Responsibility<br>
+               • Developing production‑ready Android and cross‑platform applications using Kotlin and modern Android development practices.<br>
+               • Working closely with product and design teams to deliver scalable features.<br>
+            </p>
+          </div>
+
+          <div class="proj" style="margin-top:12px;">
+            <h3>Envobyte Ltd — Android Developer Intern</h3>
+            <p class="muted">Oct 2025 – Dec 2025</p>
+            <div class="row">
+              <span class="tag">Android</span>
+              <span class="tag">Jetpack Compose</span>
+              <span class="tag">MVVM</span>
+              <span class="tag">Firebase</span>
+            </div>
+            <p class="tiny muted">
+               • Built and maintained multiple Android applications using Jetpack Compose, MVVM and Clean Architecture.<br>
+               • Integrated Firebase services and optimized app performance and UI responsiveness.<br>
             </p>
           </div>
         </div>
@@ -441,7 +277,7 @@
       <div class="card">
         <div class="card-inner">
           <h2>Education</h2>
-          <p><strong>Model Institute of Science and Technology</strong> — Diploma in Engineering (CSE) (2022–2026)</p>
+          <p><strong>Model Institute of Science and Technology</strong> — Diploma in Engineering (Software &amp; Application Development) (2022–2026)</p>
         </div>
       </div>
     </div>
@@ -453,14 +289,13 @@
       <div class="card">
         <div class="card-inner">
           <h2>Contact</h2>
-          <p>Want to hire me or discuss an Android project? Let’s talk.</p>
+          <p>Want to hire me or discuss a mobile project? Let’s talk.</p>
 
           <div class="actions" style="margin-top:14px;">
-            <a class="btn primary" href="mailto:asifulislam01234@gmail.com">Email</a>
+            <a class="btn primary" href="/cdn-cgi/l/email-protection#ed8c9e848b9881849e818c80dddcdfded9ad8a808c8481c38e8280">Email</a>
             <a class="btn" href="tel:+8801640526786">Call</a>
             <a class="btn" href="https://github.com/iamacat02" target="_blank" rel="noreferrer">GitHub</a>
-            <!-- Add LinkedIn when you share it -->
-            <a class="btn" href="https://www.linkedin.com/in/asiful-islam-a24148350?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="https://www.linkedin.com/in/asiful-islam-a24148350" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
 
           <div class="hr"></div>
@@ -477,28 +312,12 @@
   <footer class="footer">
     <div class="container">
       <div class="split">
-        <div>© <span id="year"></span> Md Asif • Android Developer</div>
-        <div class="tiny">Built with plain HTML/CSS • Fast • Recruiter-friendly</div>
+        <div>© <span id="year"></span> Md Asif • Mobile Developer</div>
+        <div class="tiny">Built with plain HTML/CSS • Fast • Recruiter‑friendly</div>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Theme toggle
-    const body = document.body;
-    const btn = document.getElementById("themeBtn");
-    const saved = localStorage.getItem("theme");
-    if (saved) body.setAttribute("data-theme", saved);
-
-    btn.addEventListener("click", () => {
-      const next = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      body.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
-    });
-
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script defer src="script.js"></script>
 </body>
 </html>
-
