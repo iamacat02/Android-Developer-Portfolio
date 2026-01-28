@@ -93,7 +93,7 @@ I am a dedicated mobile application developer with expertise in building **high-
 
 ## 📱 Contact Information
 
-- 📧 **Email**: [asifulislam01234@gmail.com]
+- 📧 **Email**: asifulislam01234@gmail.com
 - 📞 **Phone**: +880-1640526786
 - 🔗 **GitHub**: [github.com/iamacat02](https://github.com/iamacat02)
 - 💼 **LinkedIn**: [linkedin.com/in/asiful-islam-a24148350](https://www.linkedin.com/in/asiful-islam-a24148350)
