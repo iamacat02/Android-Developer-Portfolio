@@ -375,6 +375,23 @@ a {
   animation: pulse 2s ease-in-out infinite;
 }
 
+.profile-avatar-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 8px 16px rgba(124, 92, 255, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+  border: 2px solid var(--accent);
+  transition: var(--transition);
+}
+
+.profile-avatar-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(124, 92, 255, 0.5);
+}
+
 .profile-info {
   flex: 1;
   padding-top: 6px;
@@ -476,7 +493,8 @@ a {
     gap: 12px;
   }
 
-  .profile-avatar {
+  .profile-avatar,
+  .profile-avatar-img {
     width: 64px;
     height: 64px;
     font-size: 16px;
@@ -496,7 +514,8 @@ a {
     padding: 14px;
   }
 
-  .profile-avatar {
+  .profile-avatar,
+  .profile-avatar-img {
     width: 56px;
     height: 56px;
     font-size: 14px;

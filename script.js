@@ -121,8 +121,16 @@ const ProfileManager = (() => {
  * Runs all modules when DOM is ready
  */
 document.addEventListener("DOMContentLoaded", () => {
+  // Reset scroll position to top on page load
+  window.scrollTo(0, 0);
+  
   ThemeManager.init();
   FooterManager.init();
   AnimationManager.init();
   ProfileManager.init();
+});
+
+// Also handle page load event for additional safety
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
 });
