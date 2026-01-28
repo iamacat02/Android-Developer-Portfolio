@@ -92,6 +92,31 @@ const AnimationManager = (() => {
 })();
 
 /**
+ * Profile Manager
+ * Handles profile card title toggling and animations
+ */
+const ProfileManager = (() => {
+  const init = () => {
+    setupTitleToggle();
+  };
+
+  const setupTitleToggle = () => {
+    const titleMain = document.getElementById('titleMain');
+    const titleSecond = document.getElementById('titleSecond');
+
+    if (!titleMain || !titleSecond) return;
+
+    // Toggle titles every 8 seconds
+    setInterval(() => {
+      titleMain.classList.toggle('active');
+      titleSecond.classList.toggle('active');
+    }, 8000);
+  };
+
+  return { init };
+})();
+
+/**
  * Application Initialization
  * Runs all modules when DOM is ready
  */
@@ -99,4 +124,5 @@ document.addEventListener("DOMContentLoaded", () => {
   ThemeManager.init();
   FooterManager.init();
   AnimationManager.init();
+  ProfileManager.init();
 });
